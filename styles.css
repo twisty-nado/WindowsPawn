@@ -62,24 +62,24 @@
     width: 100%;
     height: 29px;
     bottom: 0;
-    background-color: #c0c0c0;
-    box-shadow: inset 0px 2px #fff;
+    background: linear-gradient(180deg,#0997ff,#0053ee 8%,#0050ee 40%,#06f 88%,#06f 93%,#005bff 95%,#003dd7 96%,#003dd7);
 }
 
 #start {
-    width: 60px;
+    width: 80px;
+    height: 100%;
     min-width: 0px;
-    margin-left: 2px;
-    margin-top: 4px;
     font-weight: bold;
-    background-image: url("Assets/start-button.png");
+    border-top-right-radius: 28px; 
+    border-bottom-right-radius: 28px; 
+    background: url("Assets/start-button.png"), linear-gradient(180deg, hsla(119, 39%, 37%, 1) 0%, hsla(120, 28%, 66%, 1) 4%, hsla(121, 31%, 49%, 1) 13%, hsla(120, 41%, 49%, 1) 90%, hsla(133, 40%, 32%, 1) 100%);;
     background-repeat: no-repeat;
-    background-position: 6px 4px;
+    background-position: center;
 }
 
 #startMenu {
     box-shadow: inset -1px -1px #0a0a0a,inset 1px 1px #dfdfdf,inset -2px -2px grey,inset 2px 2px #fff;
-    width: 200px;
+    width: 300px;
     height: 400px;
     background-color: #c0c0c0;
     position: absolute;
@@ -93,7 +93,7 @@
 }
 
 #startLabel {
-    background: linear-gradient(180deg, darkred 62%, red 100%);
+    background: linear-gradient(180deg,#0997ff,#0053ee 8%,#0050ee 40%,#06f 88%,#06f 93%,#003dd7);
     width: 25px;
     height: calc(100% - 8px);
     margin-top: 4px;
@@ -191,11 +191,11 @@ button{
 #timeArea{
     width: 60px;
     min-width: 0px;
-    height: 23px;
+    height: 100%;
     position: absolute;
-    right: 2px;
-    top:4px;
-    box-shadow: inset -1px -1px #fff,inset 1px 1px #0a0a0a,inset -2px -2px #dfdfdf,inset 2px 2px grey;
+    right: 0px;
+    top:0px;
+    background: linear-gradient(180deg, hsla(200, 85%, 49%, 1) 0%, hsla(200, 85%, 49%, 1) 31%, hsla(205, 84%, 50%, 1) 68%, hsla(202, 86%, 48%, 1) 100%);
 }
 
 :root {
@@ -251,18 +251,19 @@ button{
 .winbox:not(.max) .wb-header {
     cursor: default;
     background-color: #000080;
-    height: 20px;
+    height: 28px;
     line-height: 20px;
     font-family: "Pixelated MS Sans Serif";
     font-size: 10px;
-    width: calc(100% - 7px);
-    margin: 3px;
+    width: 100%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
 }
 
 .wb-header {
     cursor: default;
-    background: linear-gradient(90deg,red,firebrick);
-    height: 20px;
+    background: linear-gradient(180deg,#0997ff,#0053ee 8%,#0050ee 40%,#06f 88%,#06f 93%,#005bff 95%,#003dd7 96%,#003dd7);
+    height: 28px;
     line-height: 20px;
     font-family: "Pixelated MS Sans Serif";
     font-size: 10px;
@@ -285,8 +286,8 @@ button{
 
 .wb-title {
     cursor: default;
-    height: 20px;
-    line-height: 20px;
+    height: 28px;
+    line-height: 30px;
     font-family: "Pixelated MS Sans Serif", Arial;
     font-weight: bold;
     font-size: 11px;
@@ -296,65 +297,76 @@ button{
 
 .winbox:not(.max) .wb-title {
     cursor: default;
-    height: 20px;
-    line-height: 20px;
+    height: 28px;
+    line-height: 30px;
     font-family: "Pixelated MS Sans Serif", Arial;
     font-weight: bold;
     font-size: 11px;
 }
 
 .winbox:not(.max) .wb-body {
-    top: 26px;
-    margin: 4px;
-    background-color: #c0c0c0;
+    top: 28px;
+    margin: 3px;
+    background-color: #ece9d8;
 }
 
 .wb-body {
-    top: 20px;
+    top: 30px;
     margin: 0px;
-    background-color: #c0c0c0;
+    background-color: #ece9d8;
 }
 
 .winbox:not(.max) {
     background-color: #c0c0c0;
-    box-shadow: inset -1px -1px #0a0a0a,inset 1px 1px #dfdfdf,inset -2px -2px grey,inset 2px 2px #fff;
+    box-shadow: inset -1px -1px #00138c,inset 1px 1px #0831d9,inset -2px -2px #001ea0,inset 2px 2px #166aee,inset -3px -3px #003bda,inset 3px 3px #0855dd;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
 }
 
 .wb-close {
-    width: 16px;
-    height: 14px;
+    width: 21px;
+    height: 21px;
     background-image: url("Assets/close.svg");
-    background-size: 8px;
-    background-position-x: 4px;
-    background-position-y: 3px;
-    margin-right: 3px;
-    margin-top: 3px;
-    background-color: #c0c0c0;
-    box-shadow: inset -1px -1px #0a0a0a,inset 1px 1px #fff,inset -2px -2px grey,inset 2px 2px #dfdfdf;
+    background-size: cover;
+    background-position: center;
+    margin-right: 5px;
+    margin-top: 4px;
 }
 
-    .wb-close:active {
-        box-shadow: inset -1px -1px #fff,inset 1px 1px #0a0a0a,inset -2px -2px #dfdfdf,inset 2px 2px grey;
-    }
+.winbox:not(.focus) .wb-close{
+    filter: brightness(90%);
+    opacity: 0.7;
+}
+
+.winbox:not(.focus):not(.max) .wb-max{
+    filter: brightness(90%);
+    opacity: 0.7;
+}
+
+.winbox:not(.focus) .wb-max{
+    filter: brightness(90%);
+    opacity: 0.7;
+}
+
+.winbox:not(.focus) .wb-min{
+    filter: brightness(90%);
+    opacity: 0.7;
+}
 
 .winbox:not(.max) .wb-max {
-    width: 16px;
-    height: 14px;
+    width: 21px;
+    height: 21px;
     background-image: url("Assets/maximize.svg");
-    background-size: 9px;
-    background-position-x: 3px;
-    background-position-y: 2px;
-    background-color: #c0c0c0;
+    background-size: cover;
+    background-position: center;
     margin-right: 2px;
-    box-shadow: inset -1px -1px #0a0a0a,inset 1px 1px #fff,inset -2px -2px grey,inset 2px 2px #dfdfdf;
 }
-
-.winbox:not(.max) .wb-max:active {
-    box-shadow: inset -1px -1px #fff,inset 1px 1px #0a0a0a,inset -2px -2px #dfdfdf,inset 2px 2px grey;
-}
-
 .winbox:not(.focus) .wb-header {
-    background: linear-gradient(90deg,grey,#b5b5b5);
+    background: linear-gradient(180deg, hsla(222, 66%, 64%, 1) 0%, hsla(222, 63%, 75%, 1) 4%, hsla(222, 55%, 66%, 1) 25%, hsla(222, 63%, 67%, 1) 62%, hsla(217, 69%, 71%, 1) 85%, hsla(217, 69%, 71%, 1) 96%, hsla(225, 55%, 66%, 1) 100%);
+}
+
+.winbox:not(.focus){
+    box-shadow: inset -1px -1px #4850b8,inset 1px 1px #7084d8,inset -2px -2px #4850b8,inset 2px 2px #7084d8,inset -3px -3px #7080d8,inset 3px 3px #708cd8;
 }
 
 .winbox:not(.focus) .wb-title{
@@ -362,31 +374,25 @@ button{
 }
 
 .wb-max {
-    width: 16px;
-    height: 14px;
+    width: 21px;
+    height: 21px;
     background-image: url("Assets/restore.svg");
-    background-size: 8px;
-    background-position-x: 3px;
-    background-position-y: 2px;
-    background-color: #c0c0c0;
+    background-size: cover;
+    background-position: center;
     margin-right: 2px;
-    box-shadow: inset -1px -1px #0a0a0a,inset 1px 1px #fff,inset -2px -2px grey,inset 2px 2px #dfdfdf;
-}
-.wb-max:active {
-    box-shadow: inset -1px -1px #fff,inset 1px 1px #0a0a0a,inset -2px -2px #dfdfdf,inset 2px 2px grey;
 }
 
 .wb-min {
-    width: 16px;
-    height: 14px;
+    width: 21px;
+    height: 21px;
     background-image: url("Assets/minimize.svg");
-    background-size: 6px;
-    background-position-y: 8px;
-    background-position-x: 4px;
+    background-size: cover;
+    background-position: center;
     background-color: #c0c0c0;
-    box-shadow: inset -1px -1px #0a0a0a,inset 1px 1px #fff,inset -2px -2px grey,inset 2px 2px #dfdfdf;
+    margin-right: 2px;
 }
 
-.wb-min:active {
-    box-shadow: inset -1px -1px #fff,inset 1px 1px #0a0a0a,inset -2px -2px #dfdfdf,inset 2px 2px grey;
+.wb-icon{
+    margin-top: 8px;
+    margin-left: 0px;
 }

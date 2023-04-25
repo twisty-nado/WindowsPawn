@@ -7,7 +7,7 @@
     <script src="https://unpkg.com/dragselect@latest/dist/DragSelect.js"></script>
     <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="https://unpkg.com/98.css" />
+    <link rel="stylesheet" href="https://unpkg.com/xp.css" />
     <title>Windows Pawn</title>
     <script type="module">
         import DragSelect from 'https://unpkg.com/dragselect@latest/dist/ds.es6m.min.js'
@@ -49,18 +49,14 @@
             <img draggable="false" src="https://win98icons.alexmeub.com/icons/png/paint_file-3.png" style="position: relative; left: 50%; transform: translateX(-50%);" width="32" height="32" />
             <div style="color: white; text-align: center; font-family: 'Pixelated MS Sans Serif'; width: 100%">Paint</div>
         </div>
-        <div id="selectable" style="transform: translate3d(0px, 0px, 1px);" ondblclick="showRoblox()">
-            <img draggable="false" src="https://static.wikia.nocookie.net/logopedia/images/1/15/Roblox_icon_2005.svg/revision/latest?cb=20220319140509" style="position: relative; left: 50%; transform: translateX(-50%);" width="32" height="32" />
-            <div style="color: white; text-align: center; font-family: 'Pixelated MS Sans Serif'; width: 100%">ROBLOX Player</div>
-        </div>
         <div id="selectable" style="transform: translate3d(0px, 0px, 1px);" ondblclick="showWolfenstein()">
             <img draggable="false" src="https://cdn2.steamgriddb.com/file/sgdb-cdn/icon_thumb/206f6a7ada917912e9389da75d80be3b.png" style="position: relative; left: 50%; transform: translateX(-50%);" width="32" height="32" />
             <div style="color: white; text-align: center; font-family: 'Pixelated MS Sans Serif'; width: 100%">Wolfenstein 3D</div>
         </div>
     </div>
     <div id="tbar">
-        <button id="start" onclick="start()"></button>
-        <div id="timeArea"><p style="position: absolute; right: 8px; top: -5px;" id="time">00:00 PM</p></div>
+        <div id="start" onclick="start()"></div>
+        <div id="timeArea"><p style="position: absolute; right: 8px; top: -2px;" id="time">00:00 PM</p></div>
         <div id="startMenu">
             <div id="startInner">
                 <div id="startOption" class="wupdateI" onclick="hideStart(), UnspecifiedError()">

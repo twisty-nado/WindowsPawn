@@ -54,22 +54,17 @@ function showWolfenstein() {
     });
 }
 
-function showRobloxWindow() {
+function showMinecraftWindow() {
     new WinBox({
         root: document.getElementById("desktop"),
         title: "ROBLOX",
-        icon: "https://static.wikia.nocookie.net/logopedia/images/1/15/Roblox_icon_2005.svg/revision/latest?cb=20220319140509",
-        url: "Assets/RobloxBuild/index.html",
-        width: "648px",
-        height: "513px",
+        icon: "Assets/mc.png",
+        url: "https://classic.minecraft.net",
+        width: "640px",
+        height: "480px",
         x: "center",
         y: "center",
         bottom: 29,
-        class:[
-            "no-resize",
-            "no-max",
-            "no-min"
-        ]
         
     });
 }
@@ -82,9 +77,15 @@ function shutDownBox() {
     currentButtons += 1;
     var shutdownwindowsbox = new WinBox("Shut Down Windows", {
         root: document.getElementById("desktop"),
-        modal: true,
+        class:[
+            "no-resize",
+            "no-max",
+            "no-min"
+        ],
         width: "320px",
-        height: "200px",
+        height: "220px",
+        x: "center",
+        y: "center",
         mount: document.getElementById("shutdownHTML")
             .cloneNode(true)
     });
@@ -98,9 +99,15 @@ function shutDownBox() {
 function logOffBox() {
     var shutdownwindowsbox = new WinBox("Log Off Windows", {
         root: document.getElementById("desktop"),
-        modal: true,
         width: "270px",
-        height: "120px",
+        height: "140px",
+        class:[
+            "no-resize",
+            "no-max",
+            "no-min"
+        ],
+        x: "center",
+        y: "center",
         html: '<div style="position: absolute; left: 50px"><img draggable="false" src="https://win98icons.alexmeub.com/icons/png/key_win-4.png" style="position: absolute; left: -43px; top: 12px;"><p style="margin-top: 28px; margin-left: 4px;">Are you sure you want to log off?<br><br></p><button onclick="buttons.close()" style="margin-left: 4px;">Yes</button><button style="margin-left: 6px;" onclick="buttons.close()">No</button></div>'
     });
     window.buttons = {
@@ -287,10 +294,8 @@ function start() {
 
     if (startMenu.style.display == "none") {
         startMenu.style.display = "block";
-        startButton.classList.add("active")
     } else {
         startMenu.style.display = "none";
-        startButton.classList.remove("active")
     }
 }
 
